@@ -1,0 +1,35 @@
+{
+    "name": "rekalogika/gotenberg-pdf-bundle",
+    "description": "Symfony Bundle for generating PDF using Gotenberg API",
+    "homepage": "https://rekalogika.dev/gotenberg-pdf-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Priyadi Iman Nurcahyo",
+            "email": "priyadi@rekalogika.com"
+        }
+    ],
+    "keywords": [
+        "pdf",
+        "print",
+        "paper",
+        "margin"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rekalogika\\GotenbergPdfBundle\\": "src/"
+        }
+    },
+    "require": {
+        "gotenberg/gotenberg-php": "^1.1",
+        "psr/http-client": "^1.0",
+        "psr/http-factory-implementation": "^1.0",
+        "php-http/discovery": "^1.15",
+        "rekalogika/print-contracts": "^1.0",
+        "rekalogika/print": "^1.0",
+        "symfony/config": "^6.2",
+        "symfony/dependency-injection": "^6.2",
+        "symfony/http-kernel": "^6.2"
+    }
+}
