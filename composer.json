@@ -26,8 +26,8 @@
         "psr/http-client": "^1.0",
         "psr/http-factory-implementation": "^1.0",
         "php-http/discovery": "^1.15",
-        "rekalogika/print-contracts": "^1.0",
-        "rekalogika/print": "^1.0",
+        "rekalogika/print-contracts": "^1.0.1",
+        "rekalogika/print": "^1.0.1",
         "symfony/config": "^6.2",
         "symfony/dependency-injection": "^6.2",
         "symfony/http-kernel": "^6.2"
