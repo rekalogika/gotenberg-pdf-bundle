@@ -11,7 +11,7 @@ Symfony Bundle for generating PDF using Gotenberg.
   replace this package, and we don't need to change our code.
 * High-level object-oriented API built on top of the official Gotenberg PHP
   client.
-* With the heavy lifting already done by Gotenborg, there is no need to deal
+* With the heavy lifting already done by Gotenberg, there is no need to deal
   with Chrome instances, CLI tools, Puppeteer, NodeJS, etc.
 * Infinitely scalable. Just add more instances of Gotenberg with Docker Compose
   or another container orchestration tool.
