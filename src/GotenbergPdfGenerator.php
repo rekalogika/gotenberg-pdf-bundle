@@ -50,11 +50,11 @@ class GotenbergPdfGenerator implements PdfGeneratorInterface
             )
             ->printBackground();
 
-        if ($header) {
+        if ($header !== null) {
             $chromium->header(Stream::string('header.html', $header));
         }
 
-        if ($footer) {
+        if ($footer !== null) {
             $chromium->footer(Stream::string('footer.html', $footer));
         }
 
