@@ -27,20 +27,19 @@ class GotenbergPdfGenerator implements PdfGeneratorInterface
     public function __construct(
         private ClientInterface $httpClient,
         private string $gotenbergUrl = 'http://localhost:3000',
-    ) {
-    }
+    ) {}
 
     public function generatePdfFromHtml(
         string $htmlContent,
         PaperInterface $paper,
         PageLayoutInterface $pageLayout,
         ?string $header = null,
-        ?string $footer = null
+        ?string $footer = null,
     ): StreamInterface {
         $chromium = Gotenberg::chromium($this->gotenbergUrl)
             ->paperSize(
                 $paper->getWidth() * 39.3701,
-                $paper->getHeight() * 39.3701
+                $paper->getHeight() * 39.3701,
             )
             ->margins(
                 $pageLayout->getTopMargin() * 39.3701,
