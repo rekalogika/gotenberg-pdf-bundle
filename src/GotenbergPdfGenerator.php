@@ -25,10 +25,11 @@ use Rekalogika\Contracts\Print\PdfGeneratorInterface;
 class GotenbergPdfGenerator implements PdfGeneratorInterface
 {
     public function __construct(
-        private ClientInterface $httpClient,
-        private string $gotenbergUrl = 'http://localhost:3000',
+        private readonly ClientInterface $httpClient,
+        private readonly string $gotenbergUrl = 'http://localhost:3000',
     ) {}
 
+    #[\Override]
     public function generatePdfFromHtml(
         string $htmlContent,
         PaperInterface $paper,
@@ -63,8 +64,7 @@ class GotenbergPdfGenerator implements PdfGeneratorInterface
 
         $request = $chromium->html(Stream::string('index.html', $htmlContent));
         $response = $this->httpClient->sendRequest($request);
-        $stream = $response->getBody();
 
-        return $stream;
+        return $response->getBody();
     }
 }
